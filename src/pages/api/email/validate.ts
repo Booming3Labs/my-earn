@@ -1,4 +1,3 @@
-import axios from 'axios';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
@@ -22,15 +21,16 @@ export default async function handler(
   }
 
   try {
-    const { data } = await axios.get(
-      `https://api.zerobounce.net/v2/validate?api_key=${process.env.ZEROBOUNCE_API_KEY}&email=${email}`,
-    );
+    // const { data } = await axios.get(
+    //   `https://api.zerobounce.net/v2/validate?api_key=${process.env.ZEROBOUNCE_API_KEY}&email=${email}`,
+    // );
 
-    const emailIsValid = data.status === 'valid';
-    const isRoleBased =
-      data.status === 'do_not_mail' && data.sub_status === 'role_based';
+    // const emailIsValid = data.status === 'valid';
+    // const isRoleBased =
+    //   data.status === 'do_not_mail' && data.sub_status === 'role_based';
 
-    const isValid = emailIsValid || isRoleBased;
+    // const isValid = emailIsValid || isRoleBased;
+    const isValid = true;
 
     return res.status(200).json({ isValid });
   } catch (error) {

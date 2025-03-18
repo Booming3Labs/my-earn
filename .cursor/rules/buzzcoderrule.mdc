@@ -1,0 +1,12 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Your rule content
+
+- You can @ files here
+- You can use markdown but dont have to
+- 这套代码仓库是clone的现有项目，现有项目在运行，而且十分正常的运行，所以不需要修改任何代码，如果我们的运行出现任何问题都是因为配置环境变量，服务器配置，第三方应用配置等问题
+- 这套代码是一套nextjs的前端，部署在vercel，并不在本地运行，数据库托管在railway.app，第三方登录采用privy.io,邮件发送采用resend

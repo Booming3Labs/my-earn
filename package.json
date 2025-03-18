@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development next dev --turbopack",
+    "dev": "cross-env NODE_ENV=development next dev --turbopack -p 3001",
     "build": "prisma generate && next build",
-    "start": "cross-env NODE_ENV=production next start",
+    "start": "cross-env NODE_ENV=production next start -p 3001",
     "lint": "next lint",
     "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore",
     "check-types": "tsc --noEmit --pretty",
